@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet/less" href="styles.less" type="text/css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+</head>
+<body>
+
+  <section>
+    <svg id="layered_svg">
+      <defs>
+        <pattern id="bg_fill" patternUnits="userSpaceOnUse" width="400" height="400" >
+          <image class="js-bg_img_url_fill" xlink:href="http://i.imgur.com/txgZpaZ.jpg" width="400" height="400" />
+        </pattern>
+      </defs>
+      <text y="1.2em" id="text_bottom" class="js-text_bottom">HOLY FUCK</text>
+      <text y="1.15em" x="-0.08em" id="text_top" class="js-text_top">HOLY FUCK</text>
+    </svg>
+  </section>
+
+  <section>
+    Text Input: <input class="js-text_input" type="text">
+    <br>
+    Bg Url: <input class="js-bg_img_url_input" type="text">
+  </section>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
