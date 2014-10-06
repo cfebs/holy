@@ -3,18 +3,18 @@
  * Text masking — The SVG way
   */
 
-.transition(@property, @duration, @timing_fn: ease-out, @time: 1s) {
-    -webkit-transition: @property @duration @timing_fn @time;
-    -moz-transition: @property @duration @timing_fn @time;
-    -o-transition: @property @duration @timing_fn @time;
-    transition: @property @duration @timing_fn @time;
+.transition(@property, @duration, @timing_fn: ease-out) {
+    -webkit-transition: @property @duration @timing_fn;
+    -moz-transition: @property @duration @timing_fn;
+    -o-transition: @property @duration @timing_fn;
+    transition: @property @duration @timing_fn;
 }
 
 #layered_svg {
     width: 100%; height: 400px;
     //font: 900 10em/5 'Arial Black', sans-serif;
     //font: 900 10em/5 'Source Sans Pro';//, 'Arial Black', sans-serif;
-    font-size: 10em;
+    font-size: 15em;
     font-weight: 900;
     font-family: 'Source Sans Pro', 'Arial Black', sans-serif;
 }
@@ -28,11 +28,18 @@
     fill: #fff;
 }
 
-input[type="text"] {
+#text_top,
+#text_bottom {
+    width: 200px;
+}
+
+input[type="text"],
+textarea {
     border-radius: 3px;
     padding: 0.5em;
     border: 1px #ccc solid;
     font-size: 18px;
+    font-family: sans-serif;
 }
 
 .bg_examples {
@@ -50,8 +57,10 @@ input[type="text"] {
         overflow: hidden;
         cursor: pointer;
         border: 1px #aaa solid;
+
         &:hover {
             opacity: 1;
+            .transition(opacity, 200ms);
         }
     }
 }
