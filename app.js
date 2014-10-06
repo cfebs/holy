@@ -1,12 +1,17 @@
 // APP
 
 Application = function() {
-    this.text_top = $('.js-text_top');
-    this.text_bottom = $('.js-text_bottom');
+    this.first_text_input = $('.js-text_input_first');
+    this.first_text_top = $('.js-text_top_first');
+    this.first_text_bottom = $('.js-text_bottom_first');
+
+    this.sec_text_input = $('.js-text_input_sec');
+    this.sec_text_top = $('.js-text_top_sec');
+    this.sec_text_bottom = $('.js-text_bottom_sec');
+
     this.bg_fill = $('.js-bg_img_url_fill');
     this.bg_example_holder = $('.js-bg_examples');
 
-    this.text_input = $('.js-text_input');
     this.bg_input = $('.js-bg_img_url_input');
 
     this.setupEvents();
@@ -20,10 +25,16 @@ Application.prototype.setupEvents = function() {
         self.bg_fill.attr('xlink:href', $(this).val());
     });
 
-    self.text_input.on('keyup', function() {
+    self.first_text_input.on('keyup', function() {
         var val = $(this).val();
-        self.text_top.text(val);
-        self.text_bottom.text(val);
+        self.first_text_top.text(val);
+        self.first_text_bottom.text(val);
+    });
+
+    self.sec_text_input.on('keyup', function() {
+        var val = $(this).val();
+        self.sec_text_top.text(val);
+        self.sec_text_bottom.text(val);
     });
 
     self.bg_example_holder.on('click', '.js-bg_example', function() {
