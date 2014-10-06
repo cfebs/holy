@@ -10,6 +10,17 @@
 <body>
 
   <section>
+    <input class="js-text_input" type="text" placeholder="Text Input">
+    <input class="js-bg_img_url_input" type="text" placeholder="Background Url">
+    <br>
+    <ul class="bg_examples js-bg_examples">
+      <li class="js-bg_example"><img src="http://i.imgur.com/txgZpaZ.jpg"></li>
+      <li class="js-bg_example"><img src="http://i.imgur.com/lfeCtHh.jpg"></li>
+    </ul>
+  </section>
+
+
+  <section>
     <svg id="layered_svg">
       <defs>
         <pattern id="bg_fill" patternUnits="userSpaceOnUse" width="400" height="400" >
@@ -21,13 +32,8 @@
     </svg>
   </section>
 
-  <section>
-    Text Input: <input class="js-text_input" type="text">
-    <br>
-    Bg Url: <input class="js-bg_img_url_input" type="text">
-  </section>
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/placeholder-shiv/0.2/placeholder-shiv.jquery.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
